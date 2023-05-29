@@ -4,6 +4,10 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { addToken } from '../../../store/tokens/action';
+import React from 'react';
+  import { NotificationContainer, NotificationManager } from 'react-notifications';
+  import 'react-notifications/lib/notifications.css';
+
 
 function Navbar() {
   const token = useSelector<TokenState, TokenState["tokens"]>(
@@ -80,6 +84,23 @@ function Navbar() {
     )
   }
 
+  
+  const CustomAlerts = () => {
+    const handleSuccessAlert = () => {
+      NotificationManager.success('Mensagem de sucesso', 'Título do Alert', 3000);
+    };
+  
+    return (
+      <div>
+        <button onClick={handleSuccessAlert}>Mostrar Alert de Sucesso</button>
+        <NotificationContainer />
+      </div>
+    );
+  };
+  
+  export default CustomAlerts;
+  
+  
   return (
     <>
       {navbarComponent}
