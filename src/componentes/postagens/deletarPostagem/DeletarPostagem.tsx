@@ -91,6 +91,30 @@ function DeletarPostagem() {
       </Grid>
     </>
   );
+
+
+import React from 'react';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+const DeletarPostagem = () => {
+  const handleInfoToast = () => {
+    toast.info('Mensagem de informação', { autoClose: 3000 });
+  };
+
+  return (
+    <nav>
+      <ul>
+        <li>
+          <button onClick={handleInfoToast}>Mostrar Toast de Informação</button>
+        </li>
+      </ul>
+    </nav>
+  );
+};
+
+
+
 }
 
 export default DeletarPostagem;
