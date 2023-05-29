@@ -9,12 +9,29 @@ import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 
 
+
+import React from 'react';
+
+interface FooterProps {
+  text: string;
+}
+
+const Footer: React.FC<FooterProps> = ({ text }) => {
+  return (
+    <footer>
+      <div className="container">
+        <p>{text}</p>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
 function Footer() {
   const token = useSelector<TokenState, TokenState["tokens"]>(
     (state) => state.tokens
   );
 
-  // if ternario
   return (
     <footer className='footer'>
       <Grid container py={4} alignItems={'center'}>
