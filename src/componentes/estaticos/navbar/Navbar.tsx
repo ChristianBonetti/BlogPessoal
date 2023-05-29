@@ -7,6 +7,9 @@ import { addToken } from '../../../store/tokens/action';
 import React from 'react';
   import { NotificationContainer, NotificationManager } from 'react-notifications';
   import 'react-notifications/lib/notifications.css';
+  import React from 'react';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function Navbar() {
@@ -103,6 +106,30 @@ function Navbar() {
   
   return (
     <>
+
+
+import React from 'react';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+const Navbar = () => {
+  const handleInfoToast = () => {
+    toast.info('Mensagem de informação', { autoClose: 3000 });
+  };
+
+  return (
+    <nav>
+      <ul>
+        <li>
+          <button onClick={handleInfoToast}>Mostrar Toast de Informação</button>
+        </li>
+      </ul>
+    </nav>
+  );
+};
+
+export default Navbar;
+
       {navbarComponent}
     </>
   );
