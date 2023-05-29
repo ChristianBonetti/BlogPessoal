@@ -1,13 +1,12 @@
 import axios from "axios";
 
 export const api = axios.create({
-  baseURL: 'https://blogpessoal-lon1.onrender.com/'
+  baseURL: 'https://blogdothiagofaccipieri.onrender.com/'
 })
 
 export const login = async (url: string, dados: object, setDados: any) => {
   const resposta = await api.post(url, dados)
-  setDados(resposta.data.token)
-  console.log(resposta);
+  setDados(resposta.data)
 }
 
 export const cadastrarUsuario = async (url: string, dados: object, setDados: any) => {

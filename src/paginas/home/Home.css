@@ -7,12 +7,11 @@
 }
 
 .outlinedButton {
-  border-color: #a09f9f !important;
-  color: #a09f9f !important;
+  border-color: #fff !important;
+  color: #fff !important;
 }
 
 .outlinedButton:hover {
-  background-color: #a09f9f !important;
-  color: #5a0aa5 !important;
-  border-radius: 5px;
+  background-color: #fff !important;
+  color: #385cb1 !important
 }

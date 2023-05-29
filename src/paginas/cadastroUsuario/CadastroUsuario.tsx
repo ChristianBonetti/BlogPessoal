@@ -87,7 +87,7 @@ function CadastroUsuario() {
               <form onSubmit={cadastrar}>
                 <Box display={'flex'} flexDirection={'column'} gap={2}>
                   <Typography align="center" variant="h3">
-                    Coloque seu nominho aqui hehehe
+                    Cadastrar
                   </Typography>
                   <TextField
                     name="nome"

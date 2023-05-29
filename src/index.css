@@ -1,12 +1,12 @@
-* { 
+* {
   margin: 0;
 }
 
-html { background-color: #5a0aa5;
+html {
   /* color-scheme: light dark; */
 }
 
 a {
-  color: #171414e0;
+  color: inherit;
   text-decoration: none;
 }

@@ -5,7 +5,7 @@ export const addToken = (token: string) => ({
   payload: token
 })
 
-export const addId = (id: string): Action => ({
+export const addId = (id: string) => ({
   type: "ADD_ID",
   payload: id
 })
